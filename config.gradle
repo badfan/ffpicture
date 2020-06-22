@@ -1,0 +1,43 @@
+ext {
+    cfgs = [
+            compileSdkVersion             : 28,
+            buildToolsVersion             : "28.0.3",
+            minSdkVersion                 : 19,
+            targetSdkVersion              : 28,
+            versionCode                   : 1,
+            versionName                   : "1.0.1",
+            ucropVersionCode              : 22,
+            ucropVersionName              : "2.2.0-native",
+
+            //open version control
+            androidSupportVersion         : "27.0.2",
+            version_recyclerview          : "1.0.0",
+            version_appcompat             : "1.0.0",
+
+
+            camerax_version               : "1.0.0-alpha08",
+            camerax_view_version          : "1.0.0-alpha05",
+            futures_version               : "1.0.0-rc01",
+            lifecycle_version             : "1.0.0-alpha01",
+
+            // ucrop
+            androidx_appcompat_version    : "1.1.0",
+            androidx_exifinterface_version: "1.1.0-beta01",
+            androidx_transition_version   : "1.2.0-rc01",
+            applicationId                 : "com.fcjr.fxbao"
+    ]
+    yj_sl=[
+            applicationId                  : "com.fcsl.yunji",
+            app_name                       : "深蓝云集",
+            douyin_key                     : "awhc9dd4gzppiru4",
+            wechat_appId                   : "wx362a62e96b7e3f53"
+    ]
+    yj_fc=[
+            applicationId                  : "com.fcjr.fxbao",
+            app_name                       : "富聪云集",
+            douyin_key                     : "awl2nhdsrn5y5o4c",
+            wechat_appId                   : "wx9585efa089fa3ec8"
+    ]
+
+
+}
