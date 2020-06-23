@@ -24,42 +24,42 @@ import java.util.List;
  * @describe：PictureSelector
  */
 
-public final class PictureSelector {
+public final class FFPicPicker {
 
     private final WeakReference<Activity> mActivity;
     private final WeakReference<Fragment> mFragment;
 
-    private PictureSelector(Activity activity) {
+    private FFPicPicker(Activity activity) {
         this(activity, null);
     }
 
-    private PictureSelector(Fragment fragment) {
+    private FFPicPicker(Fragment fragment) {
         this(fragment.getActivity(), fragment);
     }
 
-    private PictureSelector(Activity activity, Fragment fragment) {
+    private FFPicPicker(Activity activity, Fragment fragment) {
         mActivity = new WeakReference<>(activity);
         mFragment = new WeakReference<>(fragment);
     }
 
     /**
-     * Start PictureSelector for Activity.
+     * Start FFPicPicker for Activity.
      *
      * @param activity
-     * @return PictureSelector instance.
+     * @return FFPicPicker instance.
      */
-    public static PictureSelector create(Activity activity) {
-        return new PictureSelector(activity);
+    public static FFPicPicker newInstance(Activity activity) {
+        return new FFPicPicker(activity);
     }
 
     /**
-     * Start PictureSelector for Fragment.
+     * Start FFPicPicker for Fragment.
      *
      * @param fragment
-     * @return PictureSelector instance.
+     * @return FFPicPicker instance.
      */
-    public static PictureSelector create(Fragment fragment) {
-        return new PictureSelector(fragment);
+    public static FFPicPicker newInstance(Fragment fragment) {
+        return new FFPicPicker(fragment);
     }
 
     /**

@@ -116,7 +116,7 @@ public abstract class PictureBaseFragment extends Fragment implements Handler.Ca
     }
 
     /**
-     * init PictureSelector Style
+     * init FFPicPicker Style
      */
     protected void initPictureSelectorStyle() {
 
@@ -687,7 +687,7 @@ public abstract class PictureBaseFragment extends Fragment implements Handler.Ca
             if (config.listener != null) {
                 config.listener.onResult(images);
             } else {
-                Intent intent = PictureSelector.putIntentResult(images);
+                Intent intent = FFPicPicker.putIntentResult(images);
                 getActivity().setResult(getActivity().RESULT_OK, intent);
             }
             closeActivity();
@@ -974,7 +974,7 @@ public abstract class PictureBaseFragment extends Fragment implements Handler.Ca
                     if (config.listener != null) {
                         config.listener.onResult(images);
                     } else {
-                        Intent intent = PictureSelector.putIntentResult(images);
+                        Intent intent = FFPicPicker.putIntentResult(images);
                         getActivity().setResult(getActivity().RESULT_OK, intent);
                     }
                     closeActivity();

@@ -365,7 +365,7 @@ public class PictureFileUtils {
     }
 
     /**
-     * set empty PictureSelector Cache
+     * set empty FFPicPicker Cache
      *
      * @param mContext
      * @param type     image or video ...
@@ -386,7 +386,7 @@ public class PictureFileUtils {
     }
 
     /**
-     * set empty PictureSelector Cache
+     * set empty FFPicPicker Cache
      *
      * @param context
      * @param type    image、video、audio ...

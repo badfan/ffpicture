@@ -2,7 +2,7 @@ package com.luck.picture.lib.tools;
 
 /**
  * author：luck
- * project：PictureSelector
+ * project：FFPicPicker
  * package：com.luck.picture.lib.tool
  * email：893855882@qq.com
  * data：2017/5/25

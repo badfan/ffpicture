@@ -33,15 +33,15 @@ import java.util.List;
 
 public class PictureSelectionModel {
     private PictureSelectionConfig selectionConfig;
-    private PictureSelector selector;
+    private FFPicPicker selector;
 
-    public PictureSelectionModel(PictureSelector selector, int chooseMode) {
+    public PictureSelectionModel(FFPicPicker selector, int chooseMode) {
         this.selector = selector;
         selectionConfig = PictureSelectionConfig.getCleanInstance();
         selectionConfig.chooseMode = chooseMode;
     }
 
-    public PictureSelectionModel(PictureSelector selector, int chooseMode, boolean camera) {
+    public PictureSelectionModel(FFPicPicker selector, int chooseMode, boolean camera) {
         this.selector = selector;
         selectionConfig = PictureSelectionConfig.getCleanInstance();
         selectionConfig.camera = camera;
@@ -49,7 +49,7 @@ public class PictureSelectionModel {
     }
 
     /**
-     * @param themeStyleId PictureSelector Theme style
+     * @param themeStyleId FFPicPicker Theme style
      * @return PictureSelectionModel
      */
     public PictureSelectionModel theme(@StyleRes int themeStyleId) {
@@ -93,7 +93,7 @@ public class PictureSelectionModel {
     }
 
     /**
-     * @param selectionMode PictureSelector Selection model and PictureConfig.MULTIPLE or PictureConfig.SINGLE
+     * @param selectionMode FFPicPicker Selection model and PictureConfig.MULTIPLE or PictureConfig.SINGLE
      * @return
      */
     public PictureSelectionModel selectionMode(int selectionMode) {
@@ -289,7 +289,7 @@ public class PictureSelectionModel {
     }
 
     /**
-     * @param maxSelectNum PictureSelector max selection
+     * @param maxSelectNum FFPicPicker max selection
      * @return
      */
     public PictureSelectionModel maxSelectNum(int maxSelectNum) {
@@ -298,7 +298,7 @@ public class PictureSelectionModel {
     }
 
     /**
-     * @param minSelectNum PictureSelector min selection
+     * @param minSelectNum FFPicPicker min selection
      * @return
      */
     public PictureSelectionModel minSelectNum(int minSelectNum) {
@@ -307,7 +307,7 @@ public class PictureSelectionModel {
     }
 
     /**
-     * @param maxVideoSelectNum PictureSelector video max selection
+     * @param maxVideoSelectNum FFPicPicker video max selection
      * @return
      */
     public PictureSelectionModel maxVideoSelectNum(int maxVideoSelectNum) {
@@ -317,7 +317,7 @@ public class PictureSelectionModel {
     }
 
     /**
-     * @param minVideoSelectNum PictureSelector video min selection
+     * @param minVideoSelectNum FFPicPicker video min selection
      * @return
      */
     public PictureSelectionModel minVideoSelectNum(int minVideoSelectNum) {
@@ -350,7 +350,7 @@ public class PictureSelectionModel {
     /**
      * # alternative api cameraFileName(xxx.PNG);
      *
-     * @param suffixType PictureSelector media format
+     * @param suffixType FFPicPicker media format
      * @return
      */
     public PictureSelectionModel imageFormat(String suffixType) {
@@ -438,7 +438,7 @@ public class PictureSelectionModel {
     }
 
     /**
-     * @param imageSpanCount PictureSelector image span count
+     * @param imageSpanCount FFPicPicker image span count
      * @return
      */
     public PictureSelectionModel imageSpanCount(int imageSpanCount) {
@@ -1077,7 +1077,7 @@ public class PictureSelectionModel {
                             selectionConfig.windowAnimationStyle.activityPreviewEnterAnimation != 0
                             ? selectionConfig.windowAnimationStyle.activityPreviewEnterAnimation : 0);
         } else {
-            throw new NullPointerException("This PictureSelector is Null");
+            throw new NullPointerException("This FFPicPicker is Null");
         }
     }
 
@@ -1097,7 +1097,7 @@ public class PictureSelectionModel {
                             selectionConfig.windowAnimationStyle.activityPreviewEnterAnimation != 0
                             ? selectionConfig.windowAnimationStyle.activityPreviewEnterAnimation : 0);
         } else {
-            throw new NullPointerException("This PictureSelector is Null");
+            throw new NullPointerException("This FFPicPicker is Null");
         }
     }
 
@@ -1110,7 +1110,7 @@ public class PictureSelectionModel {
         if (selector != null) {
             selector.externalPictureVideo(path);
         } else {
-            throw new NullPointerException("This PictureSelector is Null");
+            throw new NullPointerException("This FFPicPicker is Null");
         }
     }
 }

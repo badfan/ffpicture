@@ -37,7 +37,6 @@ import com.luck.picture.lib.immersive.NavBarUtils;
 import com.luck.picture.lib.permissions.PermissionChecker;
 import com.luck.picture.lib.tools.AndroidQTransformUtils;
 import com.luck.picture.lib.tools.AttrsUtils;
-import com.luck.picture.lib.tools.BitmapUtils;
 import com.luck.picture.lib.tools.DateUtils;
 import com.luck.picture.lib.tools.MediaUtils;
 import com.luck.picture.lib.tools.PictureFileUtils;
@@ -120,7 +119,7 @@ public abstract class PictureBaseActivity extends AppCompatActivity implements H
     }
 
     /**
-     * init PictureSelector Style
+     * init FFPicPicker Style
      */
     protected void initPictureSelectorStyle() {
 
@@ -694,7 +693,7 @@ public abstract class PictureBaseActivity extends AppCompatActivity implements H
             if (config.listener != null) {
                 config.listener.onResult(images);
             } else {
-                Intent intent = PictureSelector.putIntentResult(images);
+                Intent intent = FFPicPicker.putIntentResult(images);
                 setResult(RESULT_OK, intent);
             }
             closeActivity();
@@ -985,7 +984,7 @@ public abstract class PictureBaseActivity extends AppCompatActivity implements H
                     if (config.listener != null) {
                         config.listener.onResult(images);
                     } else {
-                        Intent intent = PictureSelector.putIntentResult(images);
+                        Intent intent = FFPicPicker.putIntentResult(images);
                         setResult(RESULT_OK, intent);
                     }
                     closeActivity();

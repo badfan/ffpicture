@@ -99,7 +99,7 @@ public class PictureSelectorFragment extends PictureBaseFragment
         if (savedInstanceState != null) {
             oldCurrentListSize = savedInstanceState.getInt(PictureConfig.EXTRA_OLD_CURRENT_LIST_SIZE, 0);
             // 防止拍照内存不足时activity被回收，导致拍照后的图片未选中
-            selectionMedias = PictureSelector.obtainSelectorList(savedInstanceState);
+            selectionMedias = FFPicPicker.obtainSelectorList(savedInstanceState);
             if (mAdapter != null) {
                 isStartAnimation = true;
                 mAdapter.bindSelectImages(selectionMedias);
@@ -320,7 +320,7 @@ public class PictureSelectorFragment extends PictureBaseFragment
         }
         if (mAdapter != null && mAdapter.getSelectedImages() != null) {
             List<LocalMedia> selectedImages = mAdapter.getSelectedImages();
-            PictureSelector.saveSelectorList(outState, selectedImages);
+            FFPicPicker.saveSelectorList(outState, selectedImages);
         }
     }
 
@@ -624,7 +624,7 @@ public class PictureSelectorFragment extends PictureBaseFragment
             if (config.listener != null) {
                 config.listener.onResult(result);
             } else {
-                Intent intent = PictureSelector.putIntentResult(result);
+                Intent intent = FFPicPicker.putIntentResult(result);
                 getActivity().setResult(getActivity().RESULT_OK, intent);
             }
             closeActivity();

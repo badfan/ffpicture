@@ -80,7 +80,7 @@ public class PicturePreviewActivity extends PictureBaseActivity implements
         super.onCreate(savedInstanceState);
         if (savedInstanceState != null) {
             // 防止内存不足时activity被回收，导致图片未选中
-            selectImages = PictureSelector.obtainSelectorList(savedInstanceState);
+            selectImages = FFPicPicker.obtainSelectorList(savedInstanceState);
             isCompleteOrSelected = savedInstanceState.getBoolean(PictureConfig.EXTRA_COMPLETE_SELECTED, false);
             isChangeSelectedData = savedInstanceState.getBoolean(PictureConfig.EXTRA_CHANGE_SELECTED_DATA, false);
             onImageChecked(position);
@@ -827,7 +827,7 @@ public class PicturePreviewActivity extends PictureBaseActivity implements
         super.onSaveInstanceState(outState);
         outState.putBoolean(PictureConfig.EXTRA_COMPLETE_SELECTED, isCompleteOrSelected);
         outState.putBoolean(PictureConfig.EXTRA_CHANGE_SELECTED_DATA, isChangeSelectedData);
-        PictureSelector.saveSelectorList(outState, selectImages);
+        FFPicPicker.saveSelectorList(outState, selectImages);
     }
 
     @Override
